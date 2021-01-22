@@ -12,7 +12,7 @@ test("recieves inputs, and submits", () => {
 
     const firstName = screen.getByPlaceholderText(/edd/i);
     const lastName = screen.getByPlaceholderText(/burke/i);
-    const email = screen.getByPlaceholderText(/bluebill1049@hotmail.com/i);
+    const email = screen.getByLabelText(/email/i);
     const message = screen.getByRole('textbox');
 
     userEvent.type(firstName, "Al");
