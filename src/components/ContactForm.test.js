@@ -16,12 +16,12 @@ test("recieves inputs, and submits", () => {
     const message = screen.getByRole('textbox');
     const submitButton = screen.getByRole('button');
 
-    userEvent.type(firstName, "Al");
+    userEvent.type(firstName, "Alan");
     userEvent.type(lastName, "Gertrude");
     userEvent.type(email, "idk@wat.com");
     userEvent.type(message, "I don't remember where I parked my car");
 
-    expect(firstName).toHaveValue('Al');
+    expect(firstName).toHaveValue('Alan');
     // expect(firstName).toHaveValue('Slim');
     expect(lastName).toHaveValue('Gertrude');
     // expect(lastName).toHaveValue('Shady');
@@ -29,4 +29,7 @@ test("recieves inputs, and submits", () => {
     // expect(email).toHaveValue("eminem@rap.com");
     expect(message).toHaveValue("I don't remember where I parked my car");
     // expect(message).toHaveValue("My name is what? My name is who?");
+
+    // userEvent.click(submitButton);
+
 });
