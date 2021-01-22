@@ -14,9 +14,15 @@ test("recieves inputs, and submits", () => {
     const lastName = screen.getByPlaceholderText(/burke/i);
     const email = screen.getByLabelText(/email/i);
     const message = screen.getByRole('textbox');
+    const submitButton = screen.getByRole('button');
 
     userEvent.type(firstName, "Al");
     userEvent.type(lastName, "Gertrude");
     userEvent.type(email, "idk@wat.com");
     userEvent.type(message, "I don't remember where I parked my car");
+
+    expect(firstName).toHaveValue('Al');
+    expect(lastName).toHaveValue('Gertrude');
+    expect(email).toHaveValue('idk@wat.com');
+    expect(message).toHaveValue("I don't remember where I parked my car");
 });
