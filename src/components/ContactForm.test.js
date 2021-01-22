@@ -22,7 +22,11 @@ test("recieves inputs, and submits", () => {
     userEvent.type(message, "I don't remember where I parked my car");
 
     expect(firstName).toHaveValue('Al');
+    // expect(firstName).toHaveValue('Slim');
     expect(lastName).toHaveValue('Gertrude');
+    // expect(lastName).toHaveValue('Shady');
     expect(email).toHaveValue('idk@wat.com');
+    // expect(email).toHaveValue("eminem@rap.com");
     expect(message).toHaveValue("I don't remember where I parked my car");
+    // expect(message).toHaveValue("My name is what? My name is who?");
 });
